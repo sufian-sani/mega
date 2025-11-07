@@ -51,9 +51,10 @@ sudo chmod 777 /var/run/docker.sock
 ```
 # Install and configure Jenkins (Master machine)
 ## Sometimes Jenkins older versions are cached, clear them:
+```bash
   sudo rm -f /etc/apt/sources.list.d/jenkins.list
   sudo rm -f /usr/share/keyrings/jenkins-keyring.asc
-
+```
 
 ```bash
 sudo apt update -y
@@ -69,15 +70,18 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
 sudo apt update -y
 ```
 ## Confirm the latest Jenkins version is available
+```bash
   apt-cache madison jenkins
-
+```
 ## Install the latest Jenkins version
+```bash
   sudo apt install jenkins -y
-
+```
 ## Verify Jenkins version after installation
+```bash
   sudo systemctl status jenkins
   jenkins --version
-
+```
 - <b>Now, access Jenkins Master on the browser on port 8080 and configure it, install jenkins suggested plugins </b>.
 #
 - <b id="EKS">Create EKS Cluster on AWS (Master machine)</b>
