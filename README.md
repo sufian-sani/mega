@@ -89,15 +89,19 @@ sudo apt update -y
 - <b>install jenkins suggested plugins </b>.
 ## Create EKS Cluster on AWS (Master machine)
   - IAM user with **access keys and secret access keys**
-  - AWSCLI should be configured </a>
+  - AWSCLI should be configured
+  - Download AWSCLI:
   ```bash
   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   sudo apt install unzip
   unzip awscliv2.zip
   sudo ./aws/install
-  aws configure
   ```
-
+- Configure AWSCLI:
+```bash
+aws --version
+aws configure
+```
   - Install **kubectl** 
   ```bash
   curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
