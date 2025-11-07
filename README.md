@@ -82,7 +82,11 @@ sudo apt update -y
   sudo systemctl status jenkins
   jenkins --version
 ```
-- <b>Now, access Jenkins Master on the browser on port 8080 and configure it, install jenkins suggested plugins </b>.
+- <b>Now, access Jenkins Master on the browser on port 8080 and configure it:</b>
+```bash
+  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+- <b>install jenkins suggested plugins </b>.
 #
 - <b id="EKS">Create EKS Cluster on AWS (Master machine)</b>
   - IAM user with **access keys and secret access keys**
