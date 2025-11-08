@@ -216,11 +216,35 @@ trivy --version
   - Pipeline: Stage View
   - Blue Ocean
 
-## Connect SonarQube with Jenkins
+## Add OWASP Dependency Check (it  might take 20 minutes):
+```bash
+Jenlkins > Manage >Dependency-Check installations > Install automatically > Install from github.com
+```
+## Store SonarQube token with Jenkins
+```bash
+Go to <machine_ip>:9000
+Create SonarQube Token:
+  - Administration > Security > users > Tokens
+  - Generate the token and copy it, store it to Jenkins > Credentials > Global Credentials (add here)
+  - Connect the created Sonar TOKEN with Jenkins > Tools > SonarQube Scanner installations > 
+```
+## Add GitHub PAT Key to Jenkins
+```bash
+  - Create a GitHub PAT Key
+  - Add the key to Jenkins > Credentials > Global Credentials (add here)
+```
 
-## Connect GitHub access to Jenkins
+## Integrate SonarQube with Jenkins
+```bash
+  Jenkins > manage > system > SonarQube installations
+```
 
-## Integrate Jenkins and SonarQube
+## Create SonarQube Webhook for Jenkins
+```bash
+  SonarQube > Administration > Configuration > Webhooks
+  URL to use (Jenkins url): <ec2-machine-ip>:8080/sonarqube-webhook
+```
+
 
 ## Install ArgoCD on Master Machine
 #
