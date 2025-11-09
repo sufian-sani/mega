@@ -79,7 +79,7 @@ pipeline {
         success {
             script {
                 emailext attachLog: true,
-                from: 'bongodevbootcamp@gmail.com
+                from: 'bongodevbootcamp@gmail.com'
 ',
                 subject: "Mega project Application has been updated and deployed - '${currentBuild.result}'",
                 body: """
