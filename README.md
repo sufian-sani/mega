@@ -102,6 +102,13 @@ sudo apt update -y
 aws --version
 aws configure
 ```
+
+## Create an AWS Role Called mega-ec2-role and attach it to Master machine
+  - Create Role:
+    AWS IAM > roles > Create role > AWS Service > Use case (ec2) > Next > AdministratorAccess> Role name (mega-ec2-role) > Create Role
+  - Add Role to EC2 Master machine:
+    Master machine > Actions > Security > Modify IAM Role > Select mega-ec2-role > Update IAM Role
+    
 ## Install **kubectl** and **eksctl** (Master machine)
   - Install **kubectl** 
   ```bash
