@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Set the EC2 Instance ID and path to the .env file
+# Set the AWS Node Instance ID (where app will be running) and path to the .env file
 INSTANCE_ID="i-008d45ccab7efaa9d"
 
 # Retrieve the public IP address of the specified EC2 instance
