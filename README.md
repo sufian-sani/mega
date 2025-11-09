@@ -229,17 +229,19 @@ Go to <machine_ip>:9000
 Create SonarQube Token:
   - Administration > Security > users > Tokens
   - Generate the token and copy it, store it to Jenkins > Credentials > Global Credentials (add here)
-  - Connect the created Sonar TOKEN with Jenkins > Tools > SonarQube Scanner installations > 
+  - Connect the created Sonar TOKEN with Jenkins > Tools > Search: SonarQube Scanner installations
+  - Hit: Add SonarQube Scanner > Name: Sonar > CheckMark: Install Automatically > Install from Maven Central
 ```
+## Integrate SonarQube with Jenkins
+```bash
+  Jenkins > manage > system > SonarQube servers > SonarQube installations:
+  Name: Sonar > Server URL: <Machine_IP>:9000 > Server authentication token: Select from dropdown
+```
+
 ## Add GitHub PAT Key to Jenkins
 ```bash
   - Create a GitHub PAT Key
   - Add the key to Jenkins > Credentials > Global Credentials (add here)
-```
-
-## Integrate SonarQube with Jenkins
-```bash
-  Jenkins > manage > system > SonarQube installations
 ```
 
 ## Create SonarQube Webhook for Jenkins
@@ -329,6 +331,13 @@ Jenkins > manage > Syatem > Global Trusted Pipeline Libraries
 ```bash
   Jenkins > + New Item > Create CD Pipeline with GitOps>Jenkinsfile code (from repo)
   Build the job
+```
+
+## Do this before Building/hitting CI and CD Jenkins jobs:
+```bash
+  Go to Automations directory:
+  File: updatefrontendnew.sh > change INSTANCE_ID=<node-machine-ID where your app will be running>
+  File: updatebackendnew.sh > change INSTANCE_ID=<node-machine-ID where your app will be running>
 ```
 
 ## Clean Up
