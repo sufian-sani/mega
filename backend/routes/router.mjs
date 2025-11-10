@@ -1,4 +1,4 @@
-const { Router } = require('express');
+import { Router } from 'express'; 
 
 const router = Router();
 
@@ -10,6 +10,4 @@ router.get('/test', (req, res) => {
   res.json({ message: 'hi' });
 });
 
-
-
-module.exports = router;
+export default router;
