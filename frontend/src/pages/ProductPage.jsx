@@ -13,7 +13,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     invAxios
-      .get('/products')
+      .get('/api/products')
       .then((res) => {
         setProducts(res.data);
       })
